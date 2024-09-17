@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo da Favela da Rocinha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .accordion {
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        .accordion:hover {
+            background-color: #0056b3;
+        }
+        .panel {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 0 0 8px 8px;
+        }
+        .panel p {
+            margin: 15px 0;
+        }
+        .map {
+            height: 400px;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+        .video {
+            width: 100%;
+            height: 315px; /* Altura padrão para vídeos do YouTube */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Catálogo da Favela da Rocinha</h1>
+    </div>
+
+    <div class="container">
+        <!-- Seção de Introdução -->
+        <div class="section">
+            <h2>Introdução</h2>
+            <p>A Favela da Rocinha, localizada no Rio de Janeiro, é uma das maiores e mais conhecidas favelas do Brasil. Ela é famosa por sua rica cultura, diversidade e as desafiadoras condições de vida.</p>
+            <img src="https://via.placeholder.com/1200x600" alt="Vista da Rocinha">
+        </div>
+
+        <!-- Seção de História -->
+        <div class="section">
+            <h2>História</h2>
+            <button class="accordion">Origem da Rocinha</button>
+            <div class="panel">
+                <p>A Rocinha começou a se formar na década de 1960, com a ocupação de áreas ao redor do Morro da Rocinha. Originalmente, era uma comunidade de trabalhadores e seus descendentes.</p>
+            </div>
+
+            <button class="accordion">Desenvolvimento e Crescimento</button>
+            <div class="panel">
+                <p>Ao longo dos anos, a Rocinha cresceu rapidamente, passando a ter uma população estimada de cerca de 70.000 pessoas. O crescimento urbano desordenado resultou em muitos desafios sociais e de infraestrutura.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Cultura -->
+        <div class="section">
+            <h2>Cultura</h2>
+            <p>A Rocinha é um caldeirão de cultura. A comunidade é conhecida por suas festas vibrantes, danças de rua e música. O samba e o funk carioca são muito populares.</p>
+            <img src="https://via.placeholder.com/1200x600" alt="Cultura da Rocinha">
+        </div>
+
+        <!-- Seção de Pontos Turísticos -->
+        <div class="section">
+            <h2>Pontos Turísticos</h2>
+            <button class="accordion">Mirante Dona Marta</button>
+            <div class="panel">
+                <p>Oferece uma vista panorâmica incrível da cidade do Rio de Janeiro e da Baía de Guanabara.</p>
+            </div>
+
+            <button class="accordion">Centro Cultural da Rocinha</button>
+            <div class="panel">
+                <p>Um espaço dedicado à arte e cultura local, promovendo exposições e eventos culturais.</p>
+            </div>
+
+            <button class="accordion">Feira da Rocinha</button>
+            <div class="panel">
+                <p>Uma feira vibrante onde se pode encontrar artesanato local, roupas e comida típica.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Mapa -->
+        <div class="section">
+            <h2>Mapa da Rocinha</h2>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.585416292699!2d-43.233768684442075!3d-22.987568754788563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f6a054b569b%3A0x43e46b026ce90cf8!2sFavela%20da%20Rocinha!5e0!3m2!1spt-BR!2sbr!4v1632210496364!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Seção de Vídeo -->
+        <div class="section">
+            <h2>Vídeo sobre a Rocinha</h2>
+            <iframe class="video" src="https://www.youtube.com/embed/RbpZfYJv98k" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Catálogo da Favela da Rocinha</p>
+    </div>
+
+    <script>
+        const accordions = document.getElementsByClassName('accordion');
+        
+        Array.from(accordions).forEach(accordion => {
+            accordion.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                if (panel.style.display === 'block') {
+                    panel.style.display = 'none';
+                } else {
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
